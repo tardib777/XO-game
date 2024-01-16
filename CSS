@@ -1,0 +1,17 @@
+.sq{
+    border:1px solid black;
+    height: 200px;
+    width:200px;
+    text-align: center;
+    font-size: 160px;
+    background-color: yellow;
+}
+body{
+    background-color: blueviolet;
+}
+.sq:hover{
+    background-color: rgb(231, 231, 42);
+}
+#bar button:hover{
+    background-color: rgb(99, 27, 165);
+}
