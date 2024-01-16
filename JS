@@ -1,0 +1,229 @@
+let sq=document.getElementsByClassName("sq");
+let count=0;
+function Turn(){
+    if(count%2==0)
+document.getElementById("turn").innerHTML='X';
+else
+document.getElementById("turn").innerHTML='O';
+}
+document.getElementById("turn").innerHTML='X';
+let check_winner=function(){
+    if(sq[0].innerHTML=='X'&&sq[1].innerHTML=='X'&&sq[2].innerHTML=='X'){
+        document.getElementById("winner").innerHTML='Player X wins';
+        document.getElementById("sq1").style.backgroundColor='rgb(255, 255, 150)';
+        document.getElementById("sq2").style.backgroundColor='rgb(255, 255, 150)';
+        document.getElementById("sq3").style.backgroundColor='rgb(255, 255, 150)';
+        window.scrollTo(0,220);
+    }
+            else if(sq[0].innerHTML=='O'&&sq[1].innerHTML=='O'&&sq[2].innerHTML=='O'){
+                document.getElementById("winner").innerHTML='Player O wins';
+              document.getElementById("sq1").style.backgroundColor='rgb(255, 255, 150)';
+              document.getElementById("sq2").style.backgroundColor='rgb(255, 255, 150)';
+              document.getElementById("sq3").style.backgroundColor='rgb(255, 255, 150)';
+              window.scrollTo(0,220);
+            }
+              else if(sq[3].innerHTML=='X'&&sq[4].innerHTML=='X'&&sq[5].innerHTML=='X'){
+                document.getElementById("winner").innerHTML='Player X wins';
+              document.getElementById("sq4").style.backgroundColor='rgb(255, 255, 150)';
+              document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+              document.getElementById("sq6").style.backgroundColor='rgb(255, 255, 150)';
+              window.scrollTo(0,220);
+              }
+                  else if(sq[3].innerHTML=='O'&&sq[4].innerHTML=='O'&&sq[5].innerHTML=='O'){
+                    document.getElementById("winner").innerHTML='Player O wins';
+                    document.getElementById("sq4").style.backgroundColor='rgb(255, 255, 150)';
+                    document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                    document.getElementById("sq6").style.backgroundColor='rgb(255, 255, 150)';
+                    window.scrollTo(0,220);
+                  }
+                    
+                    else if(sq[6].innerHTML=='X'&&sq[7].innerHTML=='X'&&sq[8].innerHTML=='X'){
+                        document.getElementById("winner").innerHTML='Player X wins';
+                    document.getElementById("sq7").style.backgroundColor='rgb(255, 255, 150)';
+                    document.getElementById("sq8").style.backgroundColor='rgb(255, 255, 150)';
+                    document.getElementById("sq9").style.backgroundColor='rgb(255, 255, 150)';
+                    window.scrollTo(0,220);
+                    }
+                    
+                        else if(sq[6].innerHTML=='O'&&sq[7].innerHTML=='O'&&sq[8].innerHTML=='O'){
+                            document.getElementById("winner").innerHTML='Player O wins';
+                          document.getElementById("sq7").style.backgroundColor='rgb(255, 255, 150)';
+                          document.getElementById("sq8").style.backgroundColor='rgb(255, 255, 150)';
+                          document.getElementById("sq9").style.backgroundColor='rgb(255, 255, 150)';
+                          window.scrollTo(0,220);
+                        }
+                          
+                          else if(sq[0].innerHTML=='X'&&sq[3].innerHTML=='X'&&sq[6].innerHTML=='X'){
+                            document.getElementById("winner").innerHTML='Player X wins';
+                          document.getElementById("sq1").style.backgroundColor='rgb(255, 255, 150)';
+                          document.getElementById("sq4").style.backgroundColor='rgb(255, 255, 150)';
+                          document.getElementById("sq7").style.backgroundColor='rgb(255, 255, 150)';
+                          window.scrollTo(0,220);
+                          }
+                              else if(sq[0].innerHTML=='O'&&sq[3].innerHTML=='O'&&sq[6].innerHTML=='O'){
+                                document.getElementById("winner").innerHTML='Player O wins';
+                                document.getElementById("sq1").style.backgroundColor='rgb(255, 255, 150)';
+                              document.getElementById("sq4").style.backgroundColor='rgb(255, 255, 150)'
+                               document.getElementById("sq7").style.backgroundColor='rgb(255, 255, 150)';
+                               window.scrollTo(0,220);
+                              }
+                                else if(sq[1].innerHTML=='X'&&sq[4].innerHTML=='X'&&sq[7].innerHTML=='X'){
+                                    document.getElementById("winner").innerHTML='Player X wins';
+                                    document.getElementById("sq2").style.backgroundColor='rgb(255, 255, 150)';
+                                  document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                                  document.getElementById("sq8").style.backgroundColor='rgb(255, 255, 150)';
+                                  window.scrollTo(0,220);
+                                }
+                                    else if(sq[1].innerHTML=='O'&&sq[4].innerHTML=='O'&&sq[7].innerHTML=='O'){
+                                        document.getElementById("winner").innerHTML='Player O wins';
+                                        document.getElementById("sq2").style.backgroundColor='rgb(255, 255, 150)';
+                                     document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                                      document.getElementById("sq8").style.backgroundColor='rgb(255, 255, 150)';
+                                      window.scrollTo(0,220);
+                                    }
+                                    if(sq[2].innerHTML=='X'&&sq[5].innerHTML=='X'&&sq[8].innerHTML=='X'){
+                                        document.getElementById("winner").innerHTML='Player X wins';
+                                        document.getElementById("sq3").style.backgroundColor='rgb(255, 255, 150)';
+                                     document.getElementById("sq6").style.backgroundColor='rgb(255, 255, 150)';
+                                      document.getElementById("sq9").style.backgroundColor='rgb(255, 255, 150)';
+                                      window.scrollTo(0,220);
+                                    }
+                                        else if(sq[2].innerHTML=='O'&&sq[5].innerHTML=='O'&&sq[8].innerHTML=='O'){
+                                            document.getElementById("winner").innerHTML='Player O wins';
+                                             document.getElementById("sq3").style.backgroundColor='rgb(255, 255, 150)';
+                                            document.getElementById("sq6").style.backgroundColor='rgb(255, 255, 150)';
+                                            document.getElementById("sq9").style.backgroundColor='rgb(255, 255, 150)';
+                                            window.scrollTo(0,220);
+                                        }
+                                            if(sq[0].innerHTML=='X'&&sq[4].innerHTML=='X'&&sq[8].innerHTML=='X'){
+                                                document.getElementById("winner").innerHTML='Player X wins';
+                                                 document.getElementById("sq1").style.backgroundColor='rgb(255, 255, 150)';
+                                                  document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                                                 document.getElementById("sq9").style.backgroundColor='rgb(255, 255, 150)';
+                                                 window.scrollTo(0,220);
+                                            }   
+                                               else if(sq[0].innerHTML=='O'&&sq[4].innerHTML=='O'&&sq[8].innerHTML=='O'){
+                                                 document.getElementById("winner").innerHTML='Player O wins';
+                                                 document.getElementById("sq1").style.backgroundColor='rgb(255, 255, 150)';
+                                                  document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                                                 document.getElementById("sq9").style.backgroundColor='rgb(255, 255, 150)';
+                                                 window.scrollTo(0,220);
+                                               }
+                                                  
+                                                if(sq[2].innerHTML=='X'&&sq[4].innerHTML=='X'&&sq[6].innerHTML=='X'){
+                                                    document.getElementById("winner").innerHTML='Player X wins';
+                                                    document.getElementById("sq3").style.backgroundColor='rgb(255, 255, 150)';
+                                                    document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                                                    document.getElementById("sq7").style.backgroundColor='rgb(255, 255, 150)';
+                                                    window.scrollTo(0,220);
+                                                }
+                                                     
+                                                    else if(sq[2].innerHTML=='O'&&sq[4].innerHTML=='O'&&sq[6].innerHTML=='O'){
+                                                        document.getElementById("winner").innerHTML='Player O wins';
+                                                        document.getElementById("sq3").style.backgroundColor='rgb(255, 255, 150)';
+                                                        document.getElementById("sq5").style.backgroundColor='rgb(255, 255, 150)';
+                                                         document.getElementById("sq7").style.backgroundColor='rgb(255, 255, 150)';
+                                                         window.scrollTo(0,220);
+                                                    }
+    
+}
+let turn;
+sq[0].onclick=function(){
+if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[0].value=turn;
+    sq[0].innerHTML=turn;
+    count++;
+    Turn();
+check_winner();
+}
+sq[1].onclick=function(){
+if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[1].value=turn;
+    sq[1].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[2].onclick=function(){
+if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[2].value=turn;
+    sq[2].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[3].onclick=function(){
+if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[3].value=turn;
+    sq[3].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[4].onclick=function(){
+if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[4].value=turn;
+    sq[4].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[5].onclick=function(){
+if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[5].value=turn;
+    sq[5].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[6].onclick=function(){
+    if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[6].value=turn;
+    sq[6].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[7].onclick=function(){
+    if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[7].value=turn;
+    sq[7].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
+sq[8].onclick=function(){
+    if(count%2==0)
+turn='X';
+else
+turn='O';
+    sq[8].value=turn;
+    sq[8].innerHTML=turn;
+    count++;
+    Turn();
+    check_winner();
+}
